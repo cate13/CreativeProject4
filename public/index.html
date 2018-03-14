@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+       Rate My Professor
+    </title>
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script text="type/javascript" src="ourJS.js" defer></script>
+
+<h1>Rate My Professor<b>'s Photos</b></h1>
+
+<div class="colums">
+    
+    <div id="app1">
+        <img src="Zappala1.jpg">
+
+        <h2>Add Comment</h2>
+        <form v-on:submit.prevent="addComment">
+            <p>
+            <input v-model="addedName" placeholder="Student Name" size="35"></p>
+            <br>
+            <textarea v-model="addedComment" rows="5" cols="45" placeholder="Feedback on the Amazing Professor Zappala"></textarea>
+            <br>
+            <p><button type="submit" class="submit">Comment</button></p>
+        </form>
+
+        <h3>Comments</h3>
+        <div v-for="comment in comments">
+            <hr>
+            <p>{{ comment.text }}</p>
+            <p><i>~ {{ comment.author }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+            <button v-on:click="deleteMessage(comment)" type="submit" class="submit1">Delete</button>
+            </p>
+            
+        </div>
+        
+
+    </div>
+
+    <div id="app2">
+        <img src="Zappala2.jpg">
+
+        <h2>Add Comment</h2>
+        <form v-on:submit.prevent="addComment">
+            <p>
+            <input v-model="addedName" placeholder="Student Name" size="35"></p>
+            <br>
+            <textarea v-model="addedComment" rows="5" cols="45" placeholder="Feedback on the Amazing Professor Zappala"></textarea>
+            <br>
+            <p><button type="submit" class="submit">Comment</button></p>
+        </form>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <h3>Comments</h3>
+        <div v-for="comment in comments">
+            <hr>
+            <p>{{ comment.text }}</p>
+            <p><i>~ {{ comment.author }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+            <button v-on:click="deleteMessage(comment)" type="submit" class="submit1">Delete</button>
+            </p>
+        </div>
+    </div>
+
+    <div id="app3">
+        <img src="Zappala3.jpg">
+
+        <h2>Add Comment</h2>
+        <form v-on:submit.prevent="addComment">
+            <p>
+            <input v-model="addedName" placeholder="Student Name" size="35"></p>
+            <br>
+            <textarea v-model="addedComment" rows="5" cols="45" placeholder="Feedback on the Amazing Professor Zappala"></textarea>
+            <br>
+            <p><button type="submit" class="submit">Comment</button></p>
+        </form>
+
+        <h3>Comments</h3>
+        <div v-for="comment in comments">
+            <hr>
+            <p>{{ comment.text }}</p>
+            <p><i>~ {{ comment.author }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+            <button v-on:click="deleteMessage(comment)" type="submit" class="submit1">Delete</button>
+            </p>
+        </div>
+    </div>
+
+
+</div>
+
+    <div class="footer"><a href="https://github.com/cate13/Creative3">GitHub Link</a></div>
+  </body>
+</html>
